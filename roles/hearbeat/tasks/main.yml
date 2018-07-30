@@ -4,6 +4,10 @@
    dest: /home/ncodeitadm/
 - name: install heartbeat
   command: "nohup sudo rpm -vi heartbeat-6.3.2-x86_64.rpm"
+- name: copying the conf file
+   copy:
+    src: /home/ncodeitadm/beats/heartbeat.yml
+    dest: /etc/heartbeat/heartbeat.yml
 - name: start and enable service
   service:
    name: heartbeat-elastic

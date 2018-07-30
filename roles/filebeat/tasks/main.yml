@@ -4,6 +4,10 @@
    dest: /home/ncodeitadm/
 - name: install filebeat
   command: "nohup sudo rpm -vi filebeat-6.3.2-x86_64.rpm"
+- name: copying the conf file
+   copy:
+    src: /home/ncodeitadm/beats/filebeat.yml
+    dest: /etc/filebeat/filebeat.yml
 - name: start and enable service
   service:
    name: filebeat
