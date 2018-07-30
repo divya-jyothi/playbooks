@@ -1,5 +1,5 @@
 ---
-- hosts: Nonprod-servers
+- hosts: Nonprod-nodes
   become: true
   roles:
   - node_exporter
