@@ -1,0 +1,5 @@
+---
+- hosts: All-servers
+  become: true
+  roles:
+  - metricbeat 

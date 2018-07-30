@@ -1,0 +1,11 @@
+- name: Download the filebeat rpm
+  get_url:
+   url: https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.3.2-x86_64.rpm 
+   dest: /home/ncodeitadm/
+- name: install filebeat
+  command: "nohup sudo rpm -vi metricbeat-6.3.2-x86_64.rpm"
+- name: start and enable service
+  service:
+   name: filebeat
+   state: started
+   enabled: true

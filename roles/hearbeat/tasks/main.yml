@@ -1,0 +1,11 @@
+- name: Download the heartbeat rpm
+  get_url:
+   url: https://artifacts.elastic.co/downloads/beats/heartbeat/heartbeat-6.3.2-x86_64.rpm
+   dest: /home/ncodeitadm/
+- name: install heartbeat
+  command: "nohup sudo rpm -vi heartbeat-6.3.2-x86_64.rpm"
+- name: start and enable service
+  service:
+   name: heartbeat-elastic
+   state: started
+   enabled: true

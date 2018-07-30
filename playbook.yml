@@ -1,0 +1,5 @@
+---
+- hosts: Nonprod-Tomcat
+  become: true
+  roles:
+  - infrastructure

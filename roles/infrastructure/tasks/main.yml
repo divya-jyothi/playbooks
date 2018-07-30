@@ -1,0 +1,6 @@
+- name: Start Tomcat
+  command: "nohup /home/ncodeitadm/apache-tomcat-9.0.10/bin/catalina.sh start"
+- name: deploying war file from nexus repository
+  get_url:
+   url: http://192.168.22.138:8081/nexus/repository/Nonprod-deploy/nonprod/1.0.2/nonprod-1.0.2.war
+   dest: /home/ncodeitadm/apache-tomcat-9.0.10/webapps
