@@ -1,0 +1,16 @@
+- name: start and enable service
+  service:
+   name: filebeat
+   state: started
+   enabled: true
+- name: start and enable service
+  service:
+   name: heartbeat-elastic
+   state: started
+   enabled: true
+- name: start and enable service
+  service:
+   name: metricbeat
+   state: started
+   enabled: true
+

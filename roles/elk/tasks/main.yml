@@ -1,0 +1,12 @@
+- name: start and enable elasticsearch
+  service:
+   name: elasticsearch
+   state: started
+   enabled: true
+- name: start and enable logstash
+  service:
+   name: logstash
+   state: started
+   enabled: true
+- name: Start kibana
+  command: "nohup /home/ncodeitadm/kibana-6.3.1-linux-x86_64/bin/kibana"

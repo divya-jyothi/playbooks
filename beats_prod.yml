@@ -1,0 +1,5 @@
+---
+- hosts: Prod-servers 
+  become: true
+  roles:
+  - beats 
